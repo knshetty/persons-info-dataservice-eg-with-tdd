@@ -33,7 +33,7 @@ public class PersonModelTest {
 	}
 	
 	/**
-	 * This method tests the expected string serialisation of the Person model
+	 * This method tests the string serialisation of the Person model
 	 */
 	@Test
 	public void toStringReturnItem() {
