@@ -10,8 +10,8 @@ import models.Person;
 
 /**
  * This class implements a simple CSV data-provider, which is of IDataSource 
- * interface type. This data-provider obtains persons dataset from following 
- * resource: CSV flat-file.
+ * interface type. This data-provider extracts persons dataset from following 
+ * resource >> CSV flat-file.
  * @author Nash
  */
 public class CsvDataProvider implements IDataSource {
@@ -37,8 +37,8 @@ public class CsvDataProvider implements IDataSource {
 	 * -----------------
 	 */
 	/**
-	 * This method implements the extraction of persons dataset from csv 
-	 * flat-file as a resource.
+	 * This method implements the extraction mechanics for obtaining persons 
+	 * dataset from CSV flat-file (i.e. the resource).
 	 * @throws FileNotFoundException on csv file not found
 	 * @throws IOException on issues while handling csv flat-file
 	 * @return persons collection 
