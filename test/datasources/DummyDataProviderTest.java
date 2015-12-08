@@ -48,7 +48,7 @@ public class DummyDataProviderTest {
 	}
 	
 	/**
-	 * This method tests getPersons() method return data-type's item to match 
+	 * This method tests the getPersons() method's return data-type item to match 
 	 * with the IDataSource interface specification.
 	 */
 	@Test
