@@ -26,23 +26,23 @@ public class PersonDataService {
 		System.out.println("-------------------------------------");
 		
 		final IDataSource csv = new CsvDataProvider("resources/data.csv");
-		final IDataSource mockup = new MockDataProvider();
+		final IDataSource dummySource = new DummyDataProvider();
 
 		// --- Request data ---
 		final ArrayList<Person> persons_Csv = csv.getPersons();
-		final ArrayList<Person> persons_Mockup = mockup.getPersons();
+		final ArrayList<Person> persons_Dummy = dummySource.getPersons();
 
 		// --- Print all persons, when no arguments is passed ---
 		if (args.length == 0) {
 			System.out.println("<< Entire Dataset >>");
 			printAll(persons_Csv);
-			printAll(persons_Mockup);
+			printAll(persons_Dummy);
 		}
 		// --- Print all Minors when "nuoriso" is passed as an argument ---
 		else if (args[0].equals("nuoriso")) {
 			System.out.println("<< Nuoriso >>");
 			printMinors(persons_Csv);
-			printMinors(persons_Mockup);
+			printMinors(persons_Dummy);
 		}
 		// --- Handle invalid arguments ---
 		else {

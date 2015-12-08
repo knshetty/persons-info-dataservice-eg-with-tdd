@@ -8,18 +8,18 @@ import static org.hamcrest.CoreMatchers.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import datasources.MockDataProvider;
+import datasources.DummyDataProvider;
 import models.Person;
 
-public class MockDataProviderTest {
+public class DummyDataProviderTest {
 	
-	private MockDataProvider mdp;
+	private DummyDataProvider mdp;
 	private ArrayList<Person> persons;
 	private Person bart;
 	
 	@Before
 	public void setUp() throws Exception {
-		mdp = new MockDataProvider();
+		mdp = new DummyDataProvider();
 		persons = mdp.getPersons();
 		bart = new Person(101,"Bart","Simpsons",1987,"Springfield","USA");
 	}

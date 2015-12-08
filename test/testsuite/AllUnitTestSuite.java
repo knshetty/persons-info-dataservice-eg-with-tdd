@@ -6,12 +6,12 @@ import org.junit.runners.Suite.SuiteClasses;
 
 import models.PersonModelTest;
 import datasources.CsvDataProviderTest;
-import datasources.MockDataProviderTest;
+import datasources.DummyDataProviderTest;
 
 @RunWith(Suite.class)
 @SuiteClasses({ PersonModelTest.class,
 				CsvDataProviderTest.class, 
-				MockDataProviderTest.class})
+				DummyDataProviderTest.class})
 public class AllUnitTestSuite {
 
 }

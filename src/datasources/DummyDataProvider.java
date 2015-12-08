@@ -5,19 +5,19 @@ import java.util.ArrayList;
 import models.Person;
 
 /**
- * This class implements a simple mockup data-provider, which is of 
- * IDataSource interface type. This data-provider yeilds persons dataset from 
+ * This class implements a simple dummy data-provider, which is of 
+ * IDataSource interface type. This data-provider yields persons dataset from 
  * following resource >> A prebuilt static data collection.
  * @author Nash
  */
-public class MockDataProvider implements IDataSource {
+public class DummyDataProvider implements IDataSource {
 	
 	private final ArrayList<Person> dataCollection = new ArrayList<>();
 	
 	/**
 	 * This constructors a mockup data collection of persons.
 	 */
-	public MockDataProvider() {
+	public DummyDataProvider() {
 		this.populateDataCollection();
 	}
 	
