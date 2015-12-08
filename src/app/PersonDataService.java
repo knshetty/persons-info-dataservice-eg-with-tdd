@@ -5,9 +5,10 @@ import java.util.ArrayList;
 import models.Person;
 import datasources.*;
 /**
- * This class implements the main loop of Person-Info Service. 
- * This service can perform lookup operations on persons data from 
- * multiple resources and filter results.
+ * This class implements a Person-Info Service. This service can perform 
+ * data-extraction from multiple resources and carry-out simple transformation 
+ * operations on the extracted dataset. In addition, this service can filter 
+ * persons based on their age group before outputting info to the screen.
  * @author Nash
  */
 public class PersonDataService {
@@ -19,7 +20,7 @@ public class PersonDataService {
 	 * 18 years (i.e. enlist only Minors).
 	 */
 	public static void main(String[] args) {
-
+		
 		System.out.println("-------------------------------------");
 		System.out.println("|   Workshop: Person-Info Service   |");
 		System.out.println("-------------------------------------");
