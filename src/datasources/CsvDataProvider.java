@@ -39,8 +39,6 @@ public class CsvDataProvider implements IDataSource {
 	/**
 	 * This method implements the extraction mechanics for obtaining persons 
 	 * dataset from CSV flat-file (i.e. the resource).
-	 * @throws FileNotFoundException on csv file not found
-	 * @throws IOException on issues while handling csv flat-file
 	 * @return persons collection 
 	 */
 	@Override
