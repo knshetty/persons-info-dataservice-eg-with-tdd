@@ -6,8 +6,8 @@ import models.Person;
 
 /**
  * This class implements a simple mockup data-provider, which is of 
- * IDataSource interface type. This data-provider obtains persons dataset from 
- * following resource: Hardcoded data collection.
+ * IDataSource interface type. This data-provider yeilds persons dataset from 
+ * following resource >> A prebuilt static data collection.
  * @author Nash
  */
 public class MockDataProvider implements IDataSource {
@@ -26,7 +26,7 @@ public class MockDataProvider implements IDataSource {
 	 * -----------------
 	 */
 	/**
-	 * This method returns a collection of mockup persons
+	 * This method returns a static data collection of mockup persons
 	 * @return persons collection 
 	 */
 	@Override
