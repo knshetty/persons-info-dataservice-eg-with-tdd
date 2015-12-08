@@ -61,12 +61,6 @@ public class CsvDataProviderTest {
 		assertThat(expectedType, instanceOf(persons.get(0).getClass()));
 	}
 	
-	@Test
-	public void getPersonsReturnCollectionSize() {
-		int expectedSize = 9;
-		assertEquals(expectedSize, persons.size());
-	}
-	
 	@Test(timeout=1000) // milliseconds, i.e. 1000=1sec
 	public void getPersonsInInfiniteLoop() {
 		assertNotNull(cdp.getPersons());	
