@@ -21,13 +21,14 @@ public class PersonModelTest {
 
 	@Test
 	public void getAgeReturnItem() {
-		assertEquals(bartAge, bart.getAge());
+		int expectedAge = bartAge;
+		assertEquals(expectedAge, bart.getAge());
 	}
 	
 	@Test
 	public void toStringReturnItem() {
-		assertEquals("firstName: Bart, lastName: Simpsons, age: "+bartAge, 
-						bart.toString());
+		String expectedToString = "firstName: Bart, lastName: Simpsons, age: " + bartAge; 
+		assertEquals(expectedToString, bart.toString());
 	}
 
 }
