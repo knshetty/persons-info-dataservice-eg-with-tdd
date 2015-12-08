@@ -31,18 +31,20 @@ public class MockDataProviderTest {
 	
 	@Test
 	public void getPersonsReturnCollectionType() {
-		Collection<Object> dataCollection = new ArrayList<>();
-		assertThat(dataCollection, instanceOf(persons.getClass()));
+		Collection<Object> expectedDataCollection = new ArrayList<>();
+		assertThat(expectedDataCollection, instanceOf(persons.getClass()));
 	}
 	
 	@Test
 	public void getPersonsReturnCollectionItemType() {
+		Person expectedType = bart;
 		assertThat(bart, instanceOf(persons.get(0).getClass()));
 	}
 
 	@Test
 	public void getPersonsReturnCollectionSize() {
-		assertEquals(3, persons.size());
+		int expectedSize = 3;
+		assertEquals(expectedSize, persons.size());
 	}
 	
 	@Test(timeout=1000) // milliseconds, i.e. 1000=1sec
