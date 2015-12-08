@@ -1,7 +1,7 @@
 Person-Info Service - A Toy Example
 ===================
 
-This example service is a Java implementation, which can perform data-extraction from multiple resources and performs simple transformation operations on the extracted dataset. In addition, this service can filter dataset based on certain property value before outputting info to the screen.
+This example service is a Java implementation, which can perform data-extraction from multiple resources and conduct simple transformation operations on the extracted dataset. In addition, this service can filter dataset based on certain property value before outputting info to the screen.
 
 ----------
 ## High-Level Requirements
@@ -25,6 +25,7 @@ This example service is a Java implementation, which can perform data-extraction
 You will need the following software installed on your computer.
 
 * [JVM runtime environment](https://www.java.com)
+* (Optional) [Eclipse IDE](http://www.eclipse.org/ide/)
 
 
 ## Installation
@@ -35,8 +36,8 @@ You will need the following software installed on your computer.
 
 ## Running
 
-* Approach 1 `$ java -jar person-info-service.jar`
-* Approach 2 `$ java -jar person-info-service.jar nuoriso`
+* Approach 1 >> `$ java -jar person-info-service.jar`
+* Approach 2 >> `$ java -jar person-info-service.jar nuoriso`
 
 ## Useful Links
 * [Read/Parse CSV file in Java programming language](http://www.mkyong.com/java/how-to-read-and-parse-csv-file-in-java/)
@@ -46,7 +47,7 @@ You will need the following software installed on your computer.
 	* http://programmers.stackexchange.com/questions/212309/how-do-i-test-a-file-reader
 * JUnit testing:
 	* http://junit.org
-	* {JUnit FAQ](http://junit.org/faq.html#atests_1)
+	* [JUnit FAQ](http://junit.org/faq.html#atests_1)
 	* [JUnit Testing Video Tutorial](https://www.youtube.com/watch?v=1M7gzXC9434)
 	* [JUnit Matchers](http://tutorials.jenkov.com/java-unit-testing/matchers.html)
 * [Java data collections]( http://javamex.com/tutorials/collections/how_to_choose.shtml)
