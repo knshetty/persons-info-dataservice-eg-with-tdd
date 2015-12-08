@@ -21,10 +21,10 @@ import org.junit.Test;
  * 	  checks/assertions, throw exceptions when an unexpected situation arises.
  * 
  * Therefore, patterns & anti-pattern are:
- * Patterns >>
- * a. Test for Exceptions: NullPointerException, IndexOutOfBoundsException
+ * << Patterns >>
+ * a. Test exceptions such as: NullPointerException, IndexOutOfBoundsException
  * 
- * Anti-patterns >>
+ * << Anti-patterns >>
  * b. FileFormat Testing: Comma acts as the column separator
  * c. File Handling Testing: Open's csv-file and-only-there-after close's csv-file
  * d. Exception Handled By The Language: IOException a) while reading b) while closing
@@ -37,6 +37,10 @@ public class CsvDataProviderTest {
 	private ArrayList<Person> persons;
 	private Person bart;
 	
+	/**
+	 * This method is a setup hooks for test-cases, which ensures that each 
+	 * test-case is dealing with known values.
+	 */
 	@Before
 	public void setUp() throws Exception {
 		cdp = new CsvDataProvider("resources/data.csv");
@@ -44,33 +48,67 @@ public class CsvDataProviderTest {
 		bart = new Person(101,"Bart","Simpsons",1987,"Springfield","USA");
 	}
 	
+	/**
+	 * This method tests the side-effect of calling constructor i.e. is the local 
+	 * dummy data-collection populated.
+	 */
 	@Test
 	public void getPersonsReturnCollection() {
 		assertFalse(persons.isEmpty());
 	}
 	
+	/**
+	 * This method tests the returned data-type of getPersons() method to match 
+	 * with the IDataSource interface specification.
+	 */
 	@Test
 	public void getPersonsReturnCollectionType() {
 		Collection<Object> expectedDataCollection = new ArrayList<>();
 		assertThat(expectedDataCollection, instanceOf(persons.getClass()));
 	}
 	
+	/**
+	 * This method tests the getPersons() method's return data-type item to match 
+	 * with the IDataSource interface specification.
+	 */
 	@Test
 	public void getPersonsReturnCollectionItemType() {
 		Person expectedType = bart; 
 		assertThat(expectedType, instanceOf(persons.get(0).getClass()));
 	}
 	
+	/**
+	 * This method tests if getPersons() method is an infinite loop 
+	 */
 	@Test(timeout=1000) // milliseconds, i.e. 1000=1sec
 	public void getPersonsInInfiniteLoop() {
 		assertNotNull(cdp.getPersons());	
 	}
 	
+	/**
+	 * This method tests the toggle mechanism for handling the absence of header
+	 * field names within CSV file (i.e. first row in the CSV file). In essence,  
+	 * this toggle mechanism avoids injecting header row into the data-collection.
+	 */
 	@Test
 	public void populateDataCollectionWithoutCsvFileHeader() {
 		cdp = new CsvDataProvider("resources/data_no_header.csv");
 		persons = cdp.getPersons();
 		cdp.populateDataCollection(false);
+		int expectedSize = 9;
+		assertEquals(expectedSize, cdp.dataCollection.size());
+	}
+	
+	/**
+	 * This method tests the toggle mechanism for handling the presence of header
+	 * field names within CSV file (i.e. first row in the CSV file). In essence,  
+	 * this toggle mechanism avoids injecting header row into the data-collection.
+	 */
+	@Test
+	public void populateDataCollectionWithCsvFileHeader() {
+		cdp = new CsvDataProvider("resources/data_with_header.csv");
+		persons = cdp.getPersons();
+		cdp.populateDataCollection(true);
 		int expectedSize = 9;
 		assertEquals(expectedSize, cdp.dataCollection.size());
 	}
