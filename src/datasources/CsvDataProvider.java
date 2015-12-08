@@ -45,15 +45,8 @@ public class CsvDataProvider implements IDataSource {
 	 */
 	@Override
 	public ArrayList<Person> getPersons() {
-		try {
-			extractRawDataFromCsvFile();
-		} catch(FileNotFoundException e) {
-			e.printStackTrace();
-		} catch(IOException e) {
-			e.printStackTrace();
-		} finally {
-			populateDataCollection(true);
-		}
+		extractRawDataFromCsvFile();
+		populateDataCollection(true);
 		return dataCollection;
 	}
 	
@@ -61,7 +54,7 @@ public class CsvDataProvider implements IDataSource {
 	 * LOCAL METHODS
 	 * -------------
 	 */
-	private void extractRawDataFromCsvFile() throws FileNotFoundException, IOException {
+	private void extractRawDataFromCsvFile() {
 		openFileReader();
 		personsRawData.clear();
 		while ((rowItem = readNextLine()) != null) {
@@ -70,7 +63,7 @@ public class CsvDataProvider implements IDataSource {
 		closeFileReader();
 	}
 	
-	private String readNextLine() throws IOException {
+	private String readNextLine() {
 		String line = null;
 		try {
 			line = buffReader.readLine();
@@ -80,7 +73,7 @@ public class CsvDataProvider implements IDataSource {
 		return line;
 	}
 	
-	private void closeFileReader() throws IOException {
+	private void closeFileReader() {
 		if (buffReader != null) {
 			try {
 				buffReader.close();
@@ -90,7 +83,7 @@ public class CsvDataProvider implements IDataSource {
 		}
 	}
 	
-	private void openFileReader() throws FileNotFoundException {
+	private void openFileReader() {
 		try {
 			buffReader = new BufferedReader(new FileReader(filePath));
 		} catch(FileNotFoundException e) {
