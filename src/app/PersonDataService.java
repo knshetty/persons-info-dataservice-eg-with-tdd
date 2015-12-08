@@ -6,7 +6,7 @@ import models.Person;
 import datasources.*;
 /**
  * This class implements a Person-Info Service. This service can perform 
- * data-extraction from multiple resources and carry-out simple transformation 
+ * data-extraction from multiple resources and performs simple transformation 
  * operations on the extracted dataset. In addition, this service can filter 
  * persons based on their age group before outputting info to the screen.
  * @author Nash
