@@ -11,6 +11,11 @@ import java.util.Collection;
 import datasources.DummyDataProvider;
 import models.Person;
 
+/**
+ * This class implements test-cases that verify code contained in the 
+ * DummyDataProvider class.
+ * @author Nash
+ */
 public class DummyDataProviderTest {
 	
 	private DummyDataProvider mdp;

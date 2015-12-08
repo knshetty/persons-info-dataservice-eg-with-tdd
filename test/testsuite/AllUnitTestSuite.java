@@ -8,6 +8,10 @@ import models.PersonModelTest;
 import datasources.CsvDataProviderTest;
 import datasources.DummyDataProviderTest;
 
+/**
+ * This class aggregates all units tests that concern the Person-Info Service.
+ * @author Nash
+ */
 @RunWith(Suite.class)
 @SuiteClasses({ PersonModelTest.class,
 				CsvDataProviderTest.class, 

@@ -6,7 +6,11 @@ import java.util.Calendar;
 import org.junit.Before;
 import org.junit.Test;
 
-
+/**
+ * This class implements test-cases that verify code contained in the 
+ * PersonModel class.
+ * @author Nash
+ */
 public class PersonModelTest {
 	private Calendar now = Calendar.getInstance();
 	private int currentYear = now.get(Calendar.YEAR);

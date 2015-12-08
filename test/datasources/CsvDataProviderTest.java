@@ -31,6 +31,11 @@ import org.junit.Test;
  * e. Exception Handled by The Language: FileNotFoundException
  */
 
+/**
+ * This class implements test-cases that verify code contained in the 
+ * CsvDataProvider class.
+ * @author Nash
+ */
 public class CsvDataProviderTest {
 
 	private CsvDataProvider cdp;
