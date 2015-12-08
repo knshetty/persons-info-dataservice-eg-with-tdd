@@ -9,7 +9,7 @@ import datasources.CsvDataProviderTest;
 import datasources.DummyDataProviderTest;
 
 /**
- * This class aggregates all units tests that concern the Person-Info Service.
+ * This class aggregates all unit tests that concern the Person-Info Service.
  * @author Nash
  */
 @RunWith(Suite.class)
