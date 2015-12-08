@@ -38,7 +38,7 @@ public class MockDataProviderTest {
 	@Test
 	public void getPersonsReturnCollectionItemType() {
 		Person expectedType = bart;
-		assertThat(bart, instanceOf(persons.get(0).getClass()));
+		assertThat(expectedType, instanceOf(persons.get(0).getClass()));
 	}
 
 	@Test
