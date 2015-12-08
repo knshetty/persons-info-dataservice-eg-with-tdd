@@ -16,8 +16,8 @@ public class PersonDataService {
 	/**
 	 * This method is the main loop of this Person-Info Service.
 	 * @param nuoriso an optional argument, which could be passed while invoking 
-	 * this service. This argument filters the results, who's ages are below 
-	 * 18 years (i.e. enlist only Minors).
+	 * this service. On using this argument one can list persons who are Minors
+	 * (i.e. age below 18 years).
 	 */
 	public static void main(String[] args) {
 		
@@ -25,11 +25,11 @@ public class PersonDataService {
 		System.out.println("|   Workshop: Person-Info Service   |");
 		System.out.println("-------------------------------------");
 		
-		final IDataSource csv = new CsvDataProvider("resources/data.csv");
+		final IDataSource csvSource = new CsvDataProvider("resources/data.csv");
 		final IDataSource dummySource = new DummyDataProvider();
 
 		// --- Request data ---
-		final ArrayList<Person> persons_Csv = csv.getPersons();
+		final ArrayList<Person> persons_Csv = csvSource.getPersons();
 		final ArrayList<Person> persons_Dummy = dummySource.getPersons();
 
 		// --- Print all persons, when no arguments is passed ---
