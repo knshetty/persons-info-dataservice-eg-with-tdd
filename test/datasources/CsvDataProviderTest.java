@@ -51,18 +51,20 @@ public class CsvDataProviderTest {
 	
 	@Test
 	public void getPersonsReturnCollectionType() {
-		Collection<Object> dataCollection = new ArrayList<>();
-		assertThat(dataCollection, instanceOf(persons.getClass()));
+		Collection<Object> expectedDataCollection = new ArrayList<>();
+		assertThat(expectedDataCollection, instanceOf(persons.getClass()));
 	}
 	
 	@Test
 	public void getPersonsReturnCollectionItemType() {
-		assertThat(bart, instanceOf(persons.get(0).getClass()));
+		Person expectedType = bart; 
+		assertThat(expectedType, instanceOf(persons.get(0).getClass()));
 	}
 	
 	@Test
 	public void getPersonsReturnCollectionSize() {
-		assertEquals(9, persons.size());
+		int expectedSize = 9;
+		assertEquals(expectedSize, persons.size());
 	}
 	
 	@Test(timeout=1000) // milliseconds, i.e. 1000=1sec
@@ -75,7 +77,8 @@ public class CsvDataProviderTest {
 		cdp = new CsvDataProvider("resources/data_no_header.csv");
 		persons = cdp.getPersons();
 		cdp.populateDataCollection(false);
-		assertEquals(9, cdp.dataCollection.size());
+		int expectedSize = 9;
+		assertEquals(expectedSize, cdp.dataCollection.size());
 	}
 	
 }
