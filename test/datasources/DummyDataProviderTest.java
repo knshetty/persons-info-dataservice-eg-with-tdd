@@ -18,7 +18,7 @@ public class DummyDataProviderTest {
 	private Person bart;
 	
 	/**
-	 * This method is a setup hooks for test-cases, which ensures that each 
+	 * This method is a setup hook for test-cases, which ensures that each 
 	 * test-case is dealing with known values.
 	 */
 	@Before
@@ -29,8 +29,8 @@ public class DummyDataProviderTest {
 	}
 	
 	/**
-	 * This method tests the side-effect of calling constructor i.e. is the local 
-	 * dummy data-collection populated.
+	 * This method tests the side-effect of calling constructor i.e. populating 
+	 * the dummy data-collection.
 	 */
 	@Test
 	public void constructorInvokePopulateCollection() {

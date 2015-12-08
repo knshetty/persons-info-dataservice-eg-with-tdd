@@ -38,7 +38,7 @@ public class CsvDataProviderTest {
 	private Person bart;
 	
 	/**
-	 * This method is a setup hooks for test-cases, which ensures that each 
+	 * This method is a setup hook for test-cases, which ensures that each 
 	 * test-case is dealing with known values.
 	 */
 	@Before
@@ -49,8 +49,8 @@ public class CsvDataProviderTest {
 	}
 	
 	/**
-	 * This method tests the side-effect of calling constructor i.e. is the local 
-	 * dummy data-collection populated.
+	 * This method tests the side-effect of calling constructor i.e. populating 
+	 * the dummy data-collection.
 	 */
 	@Test
 	public void getPersonsReturnCollection() {
@@ -88,7 +88,8 @@ public class CsvDataProviderTest {
 	/**
 	 * This method tests the toggle mechanism for handling the absence of header
 	 * field names within CSV file (i.e. first row in the CSV file). In essence,  
-	 * this toggle mechanism avoids injecting header row into the data-collection.
+	 * this toggle mechanism injects also the first row into the 
+	 * data-collection knowing there is no header present.
 	 */
 	@Test
 	public void populateDataCollectionWithoutCsvFileHeader() {

@@ -14,7 +14,7 @@ public class PersonModelTest {
 	private int bartAge;
 	
 	/**
-	 * This method is a setup hooks for test-cases, which ensures that each 
+	 * This method is a setup hook for test-cases, which ensures that each 
 	 * test-case is dealing with known values.
 	 */
 	@Before
